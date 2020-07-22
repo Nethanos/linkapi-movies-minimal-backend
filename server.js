@@ -14,7 +14,7 @@ const MovieModel = require('./schemas/movie');
 
 const ProfileModel = require('./schemas/profile');
 
-const PORT = 3001 | process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`Server running at ${PORT}`));
 
