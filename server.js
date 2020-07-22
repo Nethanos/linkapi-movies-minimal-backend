@@ -22,6 +22,11 @@ const DB_URI = process.env.DB_URI
 
 mongoose.connect(DB_URI, {useNewUrlParser: true,  useUnifiedTopology: true}).then(_ => console.log("database connected"));
 
+
+app.get('/', (req,res) => {
+    res.send('welcome to linkapi movies humble server');
+})
+
 app.get('/movies/', async (req, res) => {
     let movies = []
     if(req.query.searchQuery){
