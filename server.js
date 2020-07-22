@@ -14,7 +14,9 @@ const MovieModel = require('./schemas/movie');
 
 const ProfileModel = require('./schemas/profile');
 
-app.listen(3001, () => console.log('server on'));
+const PORT = 3001 | process.env.PORT;
+
+app.listen(PORT, () => console.log(`Server running at ${PORT}`));
 
 const DB_URI = process.env.DB_URI
 
